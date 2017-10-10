@@ -24,6 +24,7 @@
 		F38022FE1F8CF2E900799CB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F38023011F8CF2E900799CB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F38023031F8CF2E900799CB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3F749C01F8CFEE50007C1AF /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +64,7 @@
 				F38023001F8CF2E900799CB1 /* LaunchScreen.storyboard */,
 				F38023031F8CF2E900799CB1 /* Info.plist */,
 				F38022FB1F8CF2E900799CB1 /* FireSocialApp.xcdatamodeld */,
+				F3F749C01F8CFEE50007C1AF /* GoogleService-Info.plist */,
 			);
 			path = FireSocialApp;
 			sourceTree = "<group>";
