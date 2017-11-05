@@ -118,10 +118,10 @@ extension LinkShareContent: Equatable {
 extension LinkShareContent: SDKBridgedContent {
   internal var sdkSharingContentRepresentation: FBSDKSharingContent {
     let content = FBSDKShareLinkContent()
-    content.contentDescription = self.description
-    content.contentTitle = self.title
-    content.imageURL = self.imageURL
-    content.quote = self.quote
+//    content.contentDescription = self.description
+//    content.contentTitle = self.title
+//    content.imageURL = self.imageURL
+//    content.quote = self.quote
     content.contentURL = self.url
     content.hashtag = self.hashtag?.sdkHashtagRepresentation
     content.peopleIDs = self.taggedPeopleIds

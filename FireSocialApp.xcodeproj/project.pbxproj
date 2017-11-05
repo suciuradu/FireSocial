@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F370933B1FAF23AC004BD9E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F370933A1FAF23AC004BD9E6 /* GoogleService-Info.plist */; };
 		F37093421FAF911E004BD9E6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37093411FAF911E004BD9E6 /* Constants.swift */; };
 		F37093441FAF922E004BD9E6 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37093431FAF922E004BD9E6 /* RoundButton.swift */; };
+		F370934B1FAFCCDB004BD9E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F370934A1FAFCCDA004BD9E6 /* GoogleService-Info.plist */; };
 		F38022F51F8CF2E900799CB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38022F41F8CF2E900799CB1 /* AppDelegate.swift */; };
 		F38022F71F8CF2E900799CB1 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38022F61F8CF2E900799CB1 /* SignInVC.swift */; };
 		F38022FA1F8CF2E900799CB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F38022F81F8CF2E900799CB1 /* Main.storyboard */; };
@@ -23,9 +23,10 @@
 		3E17339EF6E6E683939508D6 /* Pods-FireSocialApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireSocialApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-FireSocialApp/Pods-FireSocialApp.release.xcconfig"; sourceTree = "<group>"; };
 		4155960BB8D323C9A65AA2FA /* Pods-FireSocialApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireSocialApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FireSocialApp/Pods-FireSocialApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B63BA14E07710BB39CFBBFF6 /* Pods_FireSocialApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireSocialApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F370933A1FAF23AC004BD9E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F37093411FAF911E004BD9E6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F37093431FAF922E004BD9E6 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		F37093491FAFCC31004BD9E6 /* FireSocialApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FireSocialApp.entitlements; sourceTree = "<group>"; };
+		F370934A1FAFCCDA004BD9E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F38022F11F8CF2E900799CB1 /* FireSocialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireSocialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F38022F41F8CF2E900799CB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F38022F61F8CF2E900799CB1 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -109,6 +110,7 @@
 		F38022F31F8CF2E900799CB1 /* FireSocialApp */ = {
 			isa = PBXGroup;
 			children = (
+				F37093491FAFCC31004BD9E6 /* FireSocialApp.entitlements */,
 				F37093401FAF910F004BD9E6 /* Util */,
 				F370933D1FAF8F26004BD9E6 /* Model */,
 				F370933C1FAF8F21004BD9E6 /* View */,
@@ -117,8 +119,8 @@
 				F38022F81F8CF2E900799CB1 /* Main.storyboard */,
 				F38022FE1F8CF2E900799CB1 /* Assets.xcassets */,
 				F38023001F8CF2E900799CB1 /* LaunchScreen.storyboard */,
-				F370933A1FAF23AC004BD9E6 /* GoogleService-Info.plist */,
 				F38023031F8CF2E900799CB1 /* Info.plist */,
+				F370934A1FAFCCDA004BD9E6 /* GoogleService-Info.plist */,
 				F38022FB1F8CF2E900799CB1 /* FireSocialApp.xcdatamodeld */,
 			);
 			path = FireSocialApp;
@@ -168,6 +170,11 @@
 					F38022F01F8CF2E900799CB1 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -194,10 +201,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F370934B1FAFCCDB004BD9E6 /* GoogleService-Info.plist in Resources */,
 				F38023021F8CF2E900799CB1 /* LaunchScreen.storyboard in Resources */,
 				F38022FF1F8CF2E900799CB1 /* Assets.xcassets in Resources */,
 				F38022FA1F8CF2E900799CB1 /* Main.storyboard in Resources */,
-				F370933B1FAF23AC004BD9E6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
