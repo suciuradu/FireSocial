@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'E4DD95323C54A78F879DAB0F1508B8E7'
-               BlueprintName = 'nanopb'
+               BlueprintIdentifier = '8E1D092BF86FB8C0ABE055E421219B71'
+               BlueprintName = 'Pastel'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'nanopb.framework'>
+               BuildableName = 'Pastel.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
