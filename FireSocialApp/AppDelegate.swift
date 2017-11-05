@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 import Firebase
+import FBSDKCoreKit
+import FBSDKCoreKit.h
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -92,6 +94,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    
+    
+    
 
 }
 

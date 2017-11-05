@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F370933B1FAF23AC004BD9E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F370933A1FAF23AC004BD9E6 /* GoogleService-Info.plist */; };
+		F37093421FAF911E004BD9E6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37093411FAF911E004BD9E6 /* Constants.swift */; };
+		F37093441FAF922E004BD9E6 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37093431FAF922E004BD9E6 /* RoundButton.swift */; };
 		F38022F51F8CF2E900799CB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38022F41F8CF2E900799CB1 /* AppDelegate.swift */; };
 		F38022F71F8CF2E900799CB1 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38022F61F8CF2E900799CB1 /* SignInVC.swift */; };
 		F38022FA1F8CF2E900799CB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F38022F81F8CF2E900799CB1 /* Main.storyboard */; };
@@ -22,6 +24,8 @@
 		4155960BB8D323C9A65AA2FA /* Pods-FireSocialApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireSocialApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FireSocialApp/Pods-FireSocialApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B63BA14E07710BB39CFBBFF6 /* Pods_FireSocialApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireSocialApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F370933A1FAF23AC004BD9E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F37093411FAF911E004BD9E6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F37093431FAF922E004BD9E6 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		F38022F11F8CF2E900799CB1 /* FireSocialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireSocialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F38022F41F8CF2E900799CB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F38022F61F8CF2E900799CB1 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -61,6 +65,29 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F370933C1FAF8F21004BD9E6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F37093431FAF922E004BD9E6 /* RoundButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F370933D1FAF8F26004BD9E6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F37093401FAF910F004BD9E6 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				F37093411FAF911E004BD9E6 /* Constants.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		F38022E81F8CF2E900799CB1 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +109,9 @@
 		F38022F31F8CF2E900799CB1 /* FireSocialApp */ = {
 			isa = PBXGroup;
 			children = (
+				F37093401FAF910F004BD9E6 /* Util */,
+				F370933D1FAF8F26004BD9E6 /* Model */,
+				F370933C1FAF8F21004BD9E6 /* View */,
 				F3F749C31F8D0C7E0007C1AF /* Controller */,
 				F38022F41F8CF2E900799CB1 /* AppDelegate.swift */,
 				F38022F81F8CF2E900799CB1 /* Main.storyboard */,
@@ -181,6 +211,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FireSocialApp/Pods-FireSocialApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Pastel/Pastel.framework",
@@ -190,6 +227,13 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pastel.framework",
@@ -242,6 +286,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F37093421FAF911E004BD9E6 /* Constants.swift in Sources */,
+				F37093441FAF922E004BD9E6 /* RoundButton.swift in Sources */,
 				F38022FD1F8CF2E900799CB1 /* FireSocialApp.xcdatamodeld in Sources */,
 				F38022F71F8CF2E900799CB1 /* SignInVC.swift in Sources */,
 				F38022F51F8CF2E900799CB1 /* AppDelegate.swift in Sources */,
@@ -384,6 +430,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FBD8M855BP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FireSocialApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Radu.FireSocialApp;
@@ -400,6 +450,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FBD8M855BP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FireSocialApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Radu.FireSocialApp;

@@ -14,5 +14,9 @@ target 'FireSocialApp' do
   pod 'Firebase/Storage'
   pod 'Pastel'
   pod 'SkyFloatingLabelTextField', '~> 3.0'
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
+  pod 'FacebookShare'
+  
 
 end

@@ -15,25 +15,27 @@ class SignInVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        print("now works")
+       
+        //pentru viitor cand voi scrie mail si parola, sa leg ultimul buton
+        //din view de tastatura si sa se modifice odata cu ea
+        pastelAnimation()
         
-        pastelView.startPastelPoint = .bottomLeft
-        pastelView.endPastelPoint = .topRight
-
-
-        // Custom Duration
-        pastelView.animationDuration = 10.0
-
-        // Custom Color
-        pastelView.setColors([#colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1), #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1),#colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1) ])
-
-        pastelView.startAnimation()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func pastelAnimation(){
+        //Pastel amnimation
+        pastelView.startPastelPoint = .bottomLeft
+        pastelView.endPastelPoint = .topRight
+        // Custom Duration
+        pastelView.animationDuration = 3.0
+        // Custom Color
+        pastelView.setColors( [#colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1),#colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1),#colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1),#colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)])
+        pastelView.startAnimation()
     }
 
 
