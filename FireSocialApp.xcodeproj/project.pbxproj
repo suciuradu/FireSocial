@@ -82,8 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				F3F749C31F8D0C7E0007C1AF /* Controller */,
-				F3F749C21F8D0C790007C1AF /* View */,
-				F3F749C11F8D0C740007C1AF /* Model */,
 				F38022F41F8CF2E900799CB1 /* AppDelegate.swift */,
 				F38022F81F8CF2E900799CB1 /* Main.storyboard */,
 				F38022FE1F8CF2E900799CB1 /* Assets.xcassets */,
@@ -93,20 +91,6 @@
 				F3F749C01F8CFEE50007C1AF /* GoogleService-Info.plist */,
 			);
 			path = FireSocialApp;
-			sourceTree = "<group>";
-		};
-		F3F749C11F8D0C740007C1AF /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		F3F749C21F8D0C790007C1AF /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		F3F749C31F8D0C7E0007C1AF /* Controller */ = {
