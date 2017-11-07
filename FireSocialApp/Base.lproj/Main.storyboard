@@ -131,11 +131,27 @@
                         <outlet property="emailField" destination="BCB-lH-imW" id="hP0-wk-IZy"/>
                         <outlet property="passwordField" destination="KV6-Hg-1rO" id="Q0l-6e-1qc"/>
                         <outlet property="pastelView" destination="l2Z-OI-pue" id="O12-BB-HcB"/>
+                        <segue destination="Yl4-C8-5AC" kind="show" identifier="goToFeed" id="Fhz-CX-HC1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+        <!--FeedVC-->
+        <scene sceneID="hxT-2Y-66U">
+            <objects>
+                <viewController id="Yl4-C8-5AC" customClass="FeedVC" customModule="FireSocialApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mki-ob-3dD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="5ty-PX-NYC"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="flu-3r-t5v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="911" y="133"/>
         </scene>
     </scenes>
     <resources>

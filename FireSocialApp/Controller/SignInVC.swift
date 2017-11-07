@@ -8,12 +8,14 @@
 
 import UIKit
 import Pastel
-import FacebookCore
-import FacebookLogin
 import Firebase
+import FacebookLogin
+import FacebookCore
 import FBSDKLoginKit
 import FBSDKCoreKit
 import SkyFloatingLabelTextField
+import SwiftKeychainWrapper
+
 
 class SignInVC: UIViewController {
 
@@ -30,10 +32,14 @@ class SignInVC: UIViewController {
         pastelAnimation()
         
     }
+    
+    
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewDidAppear(_ animated: Bool) {
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
+            print("Suciu : Id found in the keychain")
+            performSegue(withIdentifier: "goToFeed", sender: nil)
+        }
     }
     
     func pastelAnimation(){
@@ -58,6 +64,9 @@ class SignInVC: UIViewController {
                             print("Suciu: Unable to auth to firebase with email")
                         } else {
                             print("Suciu: Succes to firebase with email")
+                            if let user = user {
+                                self.completeSignIn(id: user.uid)
+                            }
                         }
                     })
                 }
@@ -89,8 +98,19 @@ class SignInVC: UIViewController {
                 print("Suciu : Unable to sign in with firebase")
             } else {
                 print("Suciu : Sucessful sign in with firebase")
+                if let user = user {
+                    self.completeSignIn(id: user.uid)
+                }
             }
         }
+    }
+    
+    //iau id-ul unic de la user si il salvez in keychain. verific IN(nu aici) viewdidappear daca id-ul este
+    //si daca este merg direct la feedVC, daca nu, il salvez si apoi intru
+    func completeSignIn(id : String) {
+        KeychainWrapper.standard.set(id, forKey: KEY_UID)
+        print("Suciu : Data saved to keyChain")
+        performSegue(withIdentifier: "goToFeed", sender: nil)
     }
 
 }
