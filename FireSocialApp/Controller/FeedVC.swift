@@ -25,7 +25,7 @@ class FeedVC: UIViewController {
     @IBAction func postBtnPressed(_ sender: Any) {
         
         //nu uita sa setezi Y constrint de la postView pe 630
-        self.centerYPopUpConstraint.constant = 630
+        self.centerYPopUpConstraint.constant = 490
         self.view.layoutIfNeeded()
         
         UIView.animate(withDuration: 0.45, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
@@ -45,7 +45,7 @@ class FeedVC: UIViewController {
         UIView.animate(withDuration: 0.45, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
             
             self.blurView.alpha = 0
-            self.centerYPopUpConstraint.constant = 630
+            self.centerYPopUpConstraint.constant = 490
             self.view.layoutIfNeeded()
         }, completion: nil)
     }

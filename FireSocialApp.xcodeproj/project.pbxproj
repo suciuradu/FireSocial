@@ -12,11 +12,11 @@
 		F370934B1FAFCCDB004BD9E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F370934A1FAFCCDA004BD9E6 /* GoogleService-Info.plist */; };
 		F370934D1FB1F29E004BD9E6 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F370934C1FB1F29E004BD9E6 /* FeedVC.swift */; };
 		F37093501FB22538004BD9E6 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F370934F1FB22538004BD9E6 /* RoundedView.swift */; };
+		F37093541FB4B8E7004BD9E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F37093531FB4B8E7004BD9E6 /* Assets.xcassets */; };
 		F38022F51F8CF2E900799CB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38022F41F8CF2E900799CB1 /* AppDelegate.swift */; };
 		F38022F71F8CF2E900799CB1 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38022F61F8CF2E900799CB1 /* SignInVC.swift */; };
 		F38022FA1F8CF2E900799CB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F38022F81F8CF2E900799CB1 /* Main.storyboard */; };
 		F38022FD1F8CF2E900799CB1 /* FireSocialApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F38022FB1F8CF2E900799CB1 /* FireSocialApp.xcdatamodeld */; };
-		F38022FF1F8CF2E900799CB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F38022FE1F8CF2E900799CB1 /* Assets.xcassets */; };
 		F38023021F8CF2E900799CB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F38023001F8CF2E900799CB1 /* LaunchScreen.storyboard */; };
 		F7E1DD93D6194A81F2C654D9 /* Pods_FireSocialApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63BA14E07710BB39CFBBFF6 /* Pods_FireSocialApp.framework */; };
 /* End PBXBuildFile section */
@@ -31,12 +31,12 @@
 		F370934A1FAFCCDA004BD9E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F370934C1FB1F29E004BD9E6 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		F370934F1FB22538004BD9E6 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		F37093531FB4B8E7004BD9E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F38022F11F8CF2E900799CB1 /* FireSocialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireSocialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F38022F41F8CF2E900799CB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F38022F61F8CF2E900799CB1 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		F38022F91F8CF2E900799CB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F38022FC1F8CF2E900799CB1 /* FireSocialApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FireSocialApp.xcdatamodel; sourceTree = "<group>"; };
-		F38022FE1F8CF2E900799CB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F38023011F8CF2E900799CB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F38023031F8CF2E900799CB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,8 +121,8 @@
 				F370933C1FAF8F21004BD9E6 /* View */,
 				F3F749C31F8D0C7E0007C1AF /* Controller */,
 				F38022F41F8CF2E900799CB1 /* AppDelegate.swift */,
+				F37093531FB4B8E7004BD9E6 /* Assets.xcassets */,
 				F38022F81F8CF2E900799CB1 /* Main.storyboard */,
-				F38022FE1F8CF2E900799CB1 /* Assets.xcassets */,
 				F38023001F8CF2E900799CB1 /* LaunchScreen.storyboard */,
 				F38023031F8CF2E900799CB1 /* Info.plist */,
 				F370934A1FAFCCDA004BD9E6 /* GoogleService-Info.plist */,
@@ -209,7 +209,7 @@
 			files = (
 				F370934B1FAFCCDB004BD9E6 /* GoogleService-Info.plist in Resources */,
 				F38023021F8CF2E900799CB1 /* LaunchScreen.storyboard in Resources */,
-				F38022FF1F8CF2E900799CB1 /* Assets.xcassets in Resources */,
+				F37093541FB4B8E7004BD9E6 /* Assets.xcassets in Resources */,
 				F38022FA1F8CF2E900799CB1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
