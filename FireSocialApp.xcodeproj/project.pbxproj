@@ -11,6 +11,7 @@
 		F37093441FAF922E004BD9E6 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37093431FAF922E004BD9E6 /* RoundButton.swift */; };
 		F370934B1FAFCCDB004BD9E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F370934A1FAFCCDA004BD9E6 /* GoogleService-Info.plist */; };
 		F370934D1FB1F29E004BD9E6 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F370934C1FB1F29E004BD9E6 /* FeedVC.swift */; };
+		F37093501FB22538004BD9E6 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F370934F1FB22538004BD9E6 /* RoundedView.swift */; };
 		F38022F51F8CF2E900799CB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38022F41F8CF2E900799CB1 /* AppDelegate.swift */; };
 		F38022F71F8CF2E900799CB1 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38022F61F8CF2E900799CB1 /* SignInVC.swift */; };
 		F38022FA1F8CF2E900799CB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F38022F81F8CF2E900799CB1 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 		F37093491FAFCC31004BD9E6 /* FireSocialApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FireSocialApp.entitlements; sourceTree = "<group>"; };
 		F370934A1FAFCCDA004BD9E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F370934C1FB1F29E004BD9E6 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		F370934F1FB22538004BD9E6 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		F38022F11F8CF2E900799CB1 /* FireSocialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireSocialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F38022F41F8CF2E900799CB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F38022F61F8CF2E900799CB1 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				F37093431FAF922E004BD9E6 /* RoundButton.swift */,
+				F370934F1FB22538004BD9E6 /* RoundedView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 			files = (
 				F370934D1FB1F29E004BD9E6 /* FeedVC.swift in Sources */,
 				F37093421FAF911E004BD9E6 /* Constants.swift in Sources */,
+				F37093501FB22538004BD9E6 /* RoundedView.swift in Sources */,
 				F37093441FAF922E004BD9E6 /* RoundButton.swift in Sources */,
 				F38022FD1F8CF2E900799CB1 /* FireSocialApp.xcdatamodeld in Sources */,
 				F38022F71F8CF2E900799CB1 /* SignInVC.swift in Sources */,
