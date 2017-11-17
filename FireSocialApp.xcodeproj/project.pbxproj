@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F30B09591FBCF00900CF04F5 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30B09581FBCF00900CF04F5 /* DataService.swift */; };
+		F35393FA1FBE67140097E7AD /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35393F91FBE67140097E7AD /* Post.swift */; };
 		F37093421FAF911E004BD9E6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37093411FAF911E004BD9E6 /* Constants.swift */; };
 		F37093441FAF922E004BD9E6 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37093431FAF922E004BD9E6 /* RoundButton.swift */; };
 		F370934B1FAFCCDB004BD9E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F370934A1FAFCCDA004BD9E6 /* GoogleService-Info.plist */; };
@@ -30,6 +31,7 @@
 		4155960BB8D323C9A65AA2FA /* Pods-FireSocialApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireSocialApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FireSocialApp/Pods-FireSocialApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B63BA14E07710BB39CFBBFF6 /* Pods_FireSocialApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireSocialApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F30B09581FBCF00900CF04F5 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		F35393F91FBE67140097E7AD /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		F37093411FAF911E004BD9E6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F37093431FAF922E004BD9E6 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		F37093491FAFCC31004BD9E6 /* FireSocialApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FireSocialApp.entitlements; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 		F370933D1FAF8F26004BD9E6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F35393F91FBE67140097E7AD /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				F37093581FB4CBEB004BD9E6 /* ShadowView.swift in Sources */,
 				F370934D1FB1F29E004BD9E6 /* FeedVC.swift in Sources */,
 				F37093421FAF911E004BD9E6 /* Constants.swift in Sources */,
+				F35393FA1FBE67140097E7AD /* Post.swift in Sources */,
 				F37093501FB22538004BD9E6 /* RoundedView.swift in Sources */,
 				F37093441FAF922E004BD9E6 /* RoundButton.swift in Sources */,
 				F30B09591FBCF00900CF04F5 /* DataService.swift in Sources */,
