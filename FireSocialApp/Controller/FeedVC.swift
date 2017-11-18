@@ -15,6 +15,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var centerYPopUpConstraint: NSLayoutConstraint!   //pentru animatia PostView care vine de jos
+    @IBOutlet weak var captionField: UITextView!
     @IBOutlet weak var postView: RoundedView!
     @IBOutlet weak var blurView: UIView!
     @IBOutlet weak var addImagePicked: UIImageView! // care se pune cand apasam selectam imaginea din poze pe care o postam
@@ -86,6 +87,34 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         imagePicker.dismiss(animated: true , completion: nil)  //selectam imaginea din poze
     }
 
+    //postez in Storage imaginea pe care o selectez (apas butonul de poza si cand apas ala verde postez in storage poza apoi apelez functia de postare in firebase)
+    @IBAction func addPostBtnPressed(_ sender: Any) {
+        guard let caption = captionField.text, caption != "" else {
+            print("Suciu: Caption must be entered")
+            return
+        }
+        guard let img = addImagePicked.image else {
+            print("Suciu: An image must be selected")
+            return
+        }
+        
+        if let imgData = UIImageJPEGRepresentation(img, 0.2) {
+            let imgUid = NSUUID().uuidString
+            let metadata = StorageMetadata()
+            metadata.contentType = "image/jpeg"
+        
+            DataService.ds.REF_POST_IMAGES.child(imgUid).putData(imgData, metadata: metadata) { (metadata, error) in
+                if error != nil {
+                    print("Suciu: Unable to upload image to Firebase")
+                } else {
+                    print("Suciu: Succesfully uploaded to Firebase")
+                    let downloadURL = metadata?.downloadURL()?.absoluteString
+                    self.postToFirebase(imgUrl: downloadURL!) //functie de postare a postului in firebase
+                }
+            }
+        }
+        
+    }
     
     @IBAction func addImagePressed(_ sender: Any) {
         present(imagePicker, animated: true, completion: nil)
@@ -131,4 +160,35 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         }, completion: nil)
     }
     
+    //generam un id pentru post si il adaugam in baza de date
+    func postToFirebase(imgUrl: String) {
+        let post: Dictionary<String, Any> = [
+            "caption" : captionField.text,
+            "imageUrl" : imgUrl,
+            "likes" : 0
+        ]
+        
+        let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
+        firebasePost.setValue(post)
+        
+        captionField.text = ""
+        addImagePicked.image = UIImage(named: "addPost")
+        closeBtnPressed(self)
+    }
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

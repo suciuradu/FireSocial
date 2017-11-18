@@ -12,10 +12,11 @@ class ShadowView: UIView {
 
     override func awakeFromNib() {
         
-        self.layer.cornerRadius = self.frame.height / 2
-        self.layer.shadowColor = UIColor.black.cgColor
-        self.layer.shadowOpacity = 0.75
-        self.layer.shadowRadius = 12
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = self.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.addSubview(blurEffectView)
     }
 
 }
