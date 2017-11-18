@@ -43,7 +43,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                     if let postDict = snap.value as? Dictionary<String, Any> {
                         let key = snap.key
                         let post = Post(postKey: key, postData: postDict)
-                        self.postsArray.append(post)
+                        self.postsArray.insert(post, at:0)
                     }
                 }
             }
@@ -110,6 +110,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                     print("Suciu: Succesfully uploaded to Firebase")
                     let downloadURL = metadata?.downloadURL()?.absoluteString
                     self.postToFirebase(imgUrl: downloadURL!) //functie de postare a postului in firebase
+                    self.view.endEditing(true) // inchide tastatura
                 }
             }
         }
@@ -158,6 +159,8 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
             self.centerYPopUpConstraint.constant = 600
             self.view.layoutIfNeeded()
         }, completion: nil)
+        
+        self.view.endEditing(true) //inchide tastatura daca am apasat pe text
     }
     
     //generam un id pentru post si il adaugam in baza de date
@@ -174,6 +177,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         captionField.text = ""
         addImagePicked.image = UIImage(named: "addPost")
         closeBtnPressed(self)
+        
     }
     
 }
