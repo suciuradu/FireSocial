@@ -9,15 +9,23 @@
 import Foundation
 import Firebase
 
-let DB_BASE = Database.database().reference()  //contine url de la baza noastra de date din firebase 
+let DB_BASE = Database.database().reference()  //contine url de la baza noastra de date din firebase
+let STORAGE_BASE = Storage.storage().reference()  // unde sunt pozele
 
 class DataService {
     
     static let ds = DataService()  //Singleton Variable. O singura instanta, globala, accesibila de oriunde
+
     
+    //DB reference
     private var _REF_BASE = DB_BASE
     private var _REF_POSTS = DB_BASE.child("posts")
     private var _REF_USERS = DB_BASE.child("users")
+    
+    //Storage reference
+    private var _REF_POST_IMAGES = STORAGE_BASE.child("post-pics")
+    //daca o sa vrem poze de profil, inca un folder cu pozele de profil
+    
     
     var REF_BASE : DatabaseReference {
         return _REF_BASE
@@ -29,6 +37,10 @@ class DataService {
     
     var REF_USERS : DatabaseReference {
         return _REF_USERS
+    }
+    
+    var REF_POST_IMAGES : StorageReference {
+        return _REF_POST_IMAGES
     }
     
     func createFirebaseDBUser (uid: String, userData: Dictionary<String,String>) {    // creem userul sa il sticam in baza de date  (uid : idul, userData: providerul facebook,firebase etc.)

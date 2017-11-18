@@ -21,6 +21,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     
     var postsArray = [Post]()
     var imagePicker: UIImagePickerController!
+    static var imageChace : NSCache<NSString, UIImage> = NSCache()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,8 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         imagePicker.delegate = self
         
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
+            
+            self.postsArray = [Post]() // cand schimbam ceva, sa nu existe duplicate in array, il reinitializam gol (NEEFICIENT!!) nu stiu altfel
             if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
                 for snap in snapshot {
                     print("SNAP: \(snap)")
@@ -61,8 +64,14 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         let post = postsArray[indexPath.row]
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
-           cell.configureCell(post: post)
-            return cell
+            
+            if let img = FeedVC.imageChace.object(forKey: post.imageUrl as NSString) {
+                cell.configureCell(post: post, img: img)
+                return cell
+            } else {
+                cell.configureCell(post: post, img: nil)
+                return cell
+            }
         } else {
             return PostCell()
         }
