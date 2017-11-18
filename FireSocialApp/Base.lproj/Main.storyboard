@@ -297,10 +297,14 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9G-NX-cHm">
                                         <rect key="frame" x="243" y="-11" width="34" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <gestureRecognizers/>
                                         <state key="normal" image="photo"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="sMq-21-mli" appends="YES" id="Lzx-BA-s3j"/>
+                                        </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Say something here ... " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d3U-D2-6OR">
-                                        <rect key="frame" x="20" y="74" width="305" height="77"/>
+                                        <rect key="frame" x="20" y="74" width="208" height="77"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -320,6 +324,10 @@
                                             <action selector="closeBtnPressed:" destination="Yl4-C8-5AC" eventType="touchUpInside" id="VIH-Z0-It0"/>
                                         </connections>
                                     </button>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ygr-d0-y1S">
+                                        <rect key="frame" x="243" y="74" width="82" height="83"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
@@ -387,6 +395,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="addImagePicked" destination="ygr-d0-y1S" id="AKc-e2-HuV"/>
                         <outlet property="blurView" destination="OEr-IN-FK3" id="8HD-Di-5im"/>
                         <outlet property="centerYPopUpConstraint" destination="gUC-bN-K4i" id="xkA-gV-ysI"/>
                         <outlet property="postView" destination="izC-wT-Ibo" id="AsH-Vi-RXe"/>
@@ -394,6 +403,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="flu-3r-t5v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="sMq-21-mli">
+                    <connections>
+                        <action selector="addImagePressed:" destination="Yl4-C8-5AC" id="f3y-cL-ql3"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="909.60000000000002" y="132.68365817091455"/>
         </scene>

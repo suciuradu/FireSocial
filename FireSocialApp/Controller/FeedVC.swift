@@ -10,21 +10,27 @@ import UIKit
 import Firebase
 import SwiftKeychainWrapper
 
-class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var centerYPopUpConstraint: NSLayoutConstraint!   //pentru animatia PostView care vine de jos
     @IBOutlet weak var postView: RoundedView!
     @IBOutlet weak var blurView: UIView!
+    @IBOutlet weak var addImagePicked: UIImageView! // care se pune cand apasam selectam imaginea din poze pe care o postam
     
     var postsArray = [Post]()
+    var imagePicker: UIImagePickerController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        imagePicker = UIImagePickerController()
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = self
         
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
             if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
@@ -61,8 +67,21 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             return PostCell()
         }
     }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+            addImagePicked.image = image
+        } else {
+            print("Suciu: Not a valid image selected")
+        }
+        imagePicker.dismiss(animated: true , completion: nil)  //selectam imaginea din poze
+    }
 
-  
+    
+    @IBAction func addImagePressed(_ sender: Any) {
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
     //cand dau sign out, sterge cheia acc ca atunci cand intrii in aplicatie sa nu te bage direct in feed
     @IBAction func signOutBtnPressed(_ sender: Any) {
         KeychainWrapper.standard.removeObject(forKey: KEY_UID)
