@@ -93,9 +93,9 @@
 			children = (
 				F37093431FAF922E004BD9E6 /* RoundButton.swift */,
 				F370934F1FB22538004BD9E6 /* RoundedView.swift */,
-				F37093551FB4C7F7004BD9E6 /* PostCell.swift */,
 				F37093571FB4CBEB004BD9E6 /* ShadowView.swift */,
 				F37093591FB4CCCB004BD9E6 /* CircleView.swift */,
+				F37093551FB4C7F7004BD9E6 /* PostCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

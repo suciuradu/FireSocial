@@ -156,7 +156,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FireSocial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3i-c0-JwI">
-                                        <rect key="frame" x="121.5" y="19" width="131" height="32"/>
+                                        <rect key="frame" x="121.5" y="30" width="131" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="FcY-p5-KrN"/>
                                         </constraints>
@@ -167,7 +167,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="P3i-c0-JwI" firstAttribute="centerY" secondItem="xx9-vq-gTK" secondAttribute="centerY" id="Bx7-VB-skX"/>
+                                    <constraint firstItem="P3i-c0-JwI" firstAttribute="centerY" secondItem="xx9-vq-gTK" secondAttribute="centerY" constant="11" id="Bx7-VB-skX"/>
                                     <constraint firstAttribute="height" constant="70" id="Kqa-f0-NdV"/>
                                     <constraint firstItem="P3i-c0-JwI" firstAttribute="centerX" secondItem="xx9-vq-gTK" secondAttribute="centerX" id="sFr-w1-WYR"/>
                                 </constraints>
@@ -186,23 +186,14 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LFz-3Z-bDd" userLabel="postView">
                                                     <rect key="frame" x="15" y="11" width="345" height="416"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="DRx-kg-dtF" customClass="CircleView" customModule="FireSocialApp" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radu" translatesAutoresizingMaskIntoConstraints="NO" id="DRx-kg-dtF" customClass="CircleView" customModule="FireSocialApp" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="45" height="48"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="60" id="aAE-xa-AgS"/>
-                                                                <constraint firstAttribute="height" constant="60" id="d2p-pm-kni"/>
+                                                                <constraint firstAttribute="width" constant="45" id="aAE-xa-AgS"/>
+                                                                <constraint firstAttribute="height" constant="48" id="d2p-pm-kni"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="suciuradu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPu-1i-1BQ">
-                                                            <rect key="frame" x="85" y="25" width="76" height="21"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="21" id="Gcb-qj-Rmj"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radu" translatesAutoresizingMaskIntoConstraints="NO" id="Asl-zQ-pz9">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="firePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="Asl-zQ-pz9">
                                                             <rect key="frame" x="0.0" y="68" width="345" height="258"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="258" id="dD2-Qc-VPA"/>
@@ -236,19 +227,28 @@
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-heart" translatesAutoresizingMaskIntoConstraints="NO" id="7xe-W2-jqO">
                                                             <rect key="frame" x="0.0" y="330" width="31" height="41"/>
                                                         </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="suciuradu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPu-1i-1BQ">
+                                                            <rect key="frame" x="56" y="14" width="76" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="21" id="Gcb-qj-Rmj"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="Asl-zQ-pz9" firstAttribute="leading" secondItem="LFz-3Z-bDd" secondAttribute="leading" id="1aE-0E-Kdc"/>
                                                         <constraint firstItem="Asl-zQ-pz9" firstAttribute="leading" secondItem="7xe-W2-jqO" secondAttribute="leading" id="9gK-vh-xuL"/>
-                                                        <constraint firstItem="Asl-zQ-pz9" firstAttribute="top" secondItem="DRx-kg-dtF" secondAttribute="bottom" constant="8" symbolic="YES" id="9uc-9a-e12"/>
+                                                        <constraint firstItem="Asl-zQ-pz9" firstAttribute="top" secondItem="DRx-kg-dtF" secondAttribute="bottom" constant="20" id="9uc-9a-e12"/>
                                                         <constraint firstItem="XBr-zK-Xgg" firstAttribute="top" secondItem="7xe-W2-jqO" secondAttribute="bottom" constant="-8" id="CvY-Wp-2BZ"/>
                                                         <constraint firstItem="TMF-dX-QFm" firstAttribute="centerY" secondItem="7xe-W2-jqO" secondAttribute="centerY" id="DXR-wC-Bgf"/>
                                                         <constraint firstAttribute="bottom" secondItem="XBr-zK-Xgg" secondAttribute="bottom" constant="8" id="LLu-7w-na9"/>
                                                         <constraint firstItem="Asl-zQ-pz9" firstAttribute="trailing" secondItem="XBr-zK-Xgg" secondAttribute="trailing" id="Neq-eH-L3a"/>
-                                                        <constraint firstItem="fPu-1i-1BQ" firstAttribute="leading" secondItem="DRx-kg-dtF" secondAttribute="trailing" constant="25" id="OUg-Lx-5M1"/>
-                                                        <constraint firstItem="TMF-dX-QFm" firstAttribute="trailing" secondItem="DRx-kg-dtF" secondAttribute="trailing" id="PuO-WT-eOD"/>
+                                                        <constraint firstItem="fPu-1i-1BQ" firstAttribute="leading" secondItem="DRx-kg-dtF" secondAttribute="trailing" constant="11" id="OUg-Lx-5M1"/>
+                                                        <constraint firstItem="TMF-dX-QFm" firstAttribute="trailing" secondItem="DRx-kg-dtF" secondAttribute="trailing" constant="15" id="PuO-WT-eOD"/>
                                                         <constraint firstItem="gpU-oX-bHo" firstAttribute="leading" secondItem="7xe-W2-jqO" secondAttribute="trailing" constant="31" id="QW7-CG-dHu"/>
-                                                        <constraint firstItem="fPu-1i-1BQ" firstAttribute="top" secondItem="LFz-3Z-bDd" secondAttribute="top" constant="25" id="S4H-Nf-yJg"/>
+                                                        <constraint firstItem="fPu-1i-1BQ" firstAttribute="top" secondItem="LFz-3Z-bDd" secondAttribute="top" constant="14" id="S4H-Nf-yJg"/>
                                                         <constraint firstItem="Asl-zQ-pz9" firstAttribute="leading" secondItem="XBr-zK-Xgg" secondAttribute="leading" id="Vdd-in-j34"/>
                                                         <constraint firstAttribute="trailing" secondItem="Asl-zQ-pz9" secondAttribute="trailing" id="ZcF-PP-hJ1"/>
                                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fPu-1i-1BQ" secondAttribute="trailing" constant="20" symbolic="YES" id="ba8-Yl-jry"/>
@@ -275,6 +275,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="caption" destination="XBr-zK-Xgg" id="T17-Sg-YXZ"/>
+                                            <outlet property="likeImg" destination="7xe-W2-jqO" id="Yeh-fW-fD0"/>
                                             <outlet property="likes" destination="TMF-dX-QFm" id="bkM-K4-iku"/>
                                             <outlet property="postImg" destination="Asl-zQ-pz9" id="BAX-Xz-Upr"/>
                                             <outlet property="profileImg" destination="DRx-kg-dtF" id="gwT-9t-UPJ"/>
@@ -285,10 +286,10 @@
                             </tableView>
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OEr-IN-FK3" userLabel="blurView" customClass="ShadowView" customModule="FireSocialApp">
                                 <rect key="frame" x="0.0" y="70" width="375" height="597"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="izC-wT-Ibo" customClass="RoundedView" customModule="FireSocialApp" customModuleProvider="target">
-                                <rect key="frame" x="15" y="233.5" width="345" height="200"/>
+                                <rect key="frame" x="15" y="833" width="345" height="200"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FireSocialLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Fyr-c1-3RO">
                                         <rect key="frame" x="20" y="-40" width="90" height="90"/>
@@ -304,7 +305,7 @@
                                         </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Say something here ... " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d3U-D2-6OR">
-                                        <rect key="frame" x="20" y="74" width="208" height="77"/>
+                                        <rect key="frame" x="20" y="73" width="208" height="82"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -327,8 +328,8 @@
                                             <action selector="closeBtnPressed:" destination="Yl4-C8-5AC" eventType="touchUpInside" id="VIH-Z0-It0"/>
                                         </connections>
                                     </button>
-                                    <imageView clipsSubviews="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="addPost" translatesAutoresizingMaskIntoConstraints="NO" id="ygr-d0-y1S">
-                                        <rect key="frame" x="243" y="73" width="82" height="83"/>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="addPost" translatesAutoresizingMaskIntoConstraints="NO" id="ygr-d0-y1S">
+                                        <rect key="frame" x="243" y="73" width="82" height="82"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
@@ -363,7 +364,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.96713346242904663" green="0.52564823627471924" blue="0.08361709862947464" alpha="0.68953339041095896" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.96713346242904663" green="0.52564823627471924" blue="0.08361709862947464" alpha="0.85209760273972601" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="8Za-0D-H7b"/>
                                 </constraints>
@@ -383,7 +384,7 @@
                             <constraint firstItem="izC-wT-Ibo" firstAttribute="top" secondItem="mki-ob-3dD" secondAttribute="top" constant="233" id="bjo-hd-puA"/>
                             <constraint firstItem="zyx-cl-HuL" firstAttribute="top" secondItem="5ty-PX-NYC" secondAttribute="top" constant="50" id="cx5-n4-rFr"/>
                             <constraint firstItem="zyx-cl-HuL" firstAttribute="leading" secondItem="5ty-PX-NYC" secondAttribute="leading" id="czv-Ob-S5v"/>
-                            <constraint firstItem="izC-wT-Ibo" firstAttribute="centerY" secondItem="mki-ob-3dD" secondAttribute="centerY" id="gUC-bN-K4i"/>
+                            <constraint firstItem="izC-wT-Ibo" firstAttribute="centerY" secondItem="mki-ob-3dD" secondAttribute="centerY" constant="600" id="gUC-bN-K4i"/>
                             <constraint firstItem="OEr-IN-FK3" firstAttribute="leading" secondItem="5ty-PX-NYC" secondAttribute="leading" id="grU-QC-Am7"/>
                             <constraint firstItem="xx9-vq-gTK" firstAttribute="top" secondItem="mki-ob-3dD" secondAttribute="top" id="m4j-HV-X2t"/>
                             <constraint firstItem="izC-wT-Ibo" firstAttribute="trailing" secondItem="iHn-f1-xgN" secondAttribute="trailing" id="ofc-Kg-DxQ"/>
@@ -418,13 +419,13 @@
     </scenes>
     <resources>
         <image name="FireSocialLogo" width="1236" height="1218"/>
-        <image name="addPost" width="38" height="38"/>
+        <image name="addPost" width="246" height="246"/>
         <image name="cancel" width="108" height="108"/>
         <image name="empty-heart" width="70" height="70"/>
+        <image name="firePlaceholder" width="345" height="258"/>
         <image name="ok" width="108" height="108"/>
         <image name="photo" width="105" height="105"/>
         <image name="post" width="108" height="108"/>
-        <image name="profile" width="113" height="155"/>
         <image name="radu" width="1280" height="1280"/>
         <image name="settings" width="99" height="99"/>
         <image name="signOut" width="108" height="102"/>

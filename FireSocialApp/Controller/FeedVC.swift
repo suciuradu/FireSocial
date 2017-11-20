@@ -68,11 +68,10 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
             
             if let img = FeedVC.imageChace.object(forKey: post.imageUrl as NSString) {
                 cell.configureCell(post: post, img: img)
-                return cell
             } else {
                 cell.configureCell(post: post, img: nil)
-                return cell
             }
+            return cell
         } else {
             return PostCell()
         }
@@ -139,7 +138,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         
         UIView.animate(withDuration: 0.55, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
             
-            self.blurView.alpha = 0.55
+            self.blurView.alpha = 0.65
             self.centerYPopUpConstraint.constant = 0
             self.view.layoutIfNeeded()
         }, completion: nil)
